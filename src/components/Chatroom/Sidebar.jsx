@@ -1,8 +1,8 @@
 import React from "react";
 import { Row, Col } from "antd";
 import UserInfo from "./UserInfo";
-import UserList from "./UserList";
 import styled from "styled-components";
+import RoomList from "./Roomlist";
 
 const SidebarStyled = styled.div`
   background: #3f0e40;
@@ -18,7 +18,7 @@ export default function Sidebar() {
           <UserInfo />
         </Col>
         <Col span={24}>
-          <UserList />
+          <RoomList />
         </Col>
       </Row>
     </SidebarStyled>
