@@ -37,13 +37,14 @@ export default function Login() {
     <div>
       <Row justify="center" style={{ height: 800 }}>
         <Col span={8}>
-          <Title level={3} style={{ textAlign: "center" }}>
-            Đăng nhập Fun Chat
+          <Title level={3} style={{ textAlign: "center", color: "white" }}>
+            Đăng nhập
           </Title>
           <Button
             icon={<GoogleOutlined />}
             style={{ width: "100%", marginBottom: "5px" }}
             onClick={() => handleLogin(googleProvider)}
+            type="link"
           >
             Đăng nhập bằng Google
           </Button>
@@ -51,6 +52,7 @@ export default function Login() {
             icon={<FacebookOutlined />}
             style={{ width: "100%" }}
             onClick={() => handleLogin(fbProvider)}
+            type="link"
           >
             Đăng nhập bằng Facebook
           </Button>
