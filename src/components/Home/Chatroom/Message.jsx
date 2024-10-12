@@ -41,7 +41,9 @@ export default function Message({ type, value, displayName, photoURL }) {
         <Avatar size="small" src={photoURL}>
           {photoURL ? "" : displayName?.charAt(0)?.toUpperCase()}
         </Avatar>
-        <Typography.Text className="author">{displayName}</Typography.Text>
+        <Typography.Text className="author" style={{ color: "white" }}>
+          {displayName}
+        </Typography.Text>
         <Button icon={<DeleteOutlined />} type="text" />
         <Typography.Text className="date"></Typography.Text>
       </div>

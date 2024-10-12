@@ -1,8 +1,8 @@
 import React from "react";
-import { Row, Col } from "antd";
+import { Row, Col, Button } from "antd";
 import UserInfo from "./UserInfo";
 import styled from "styled-components";
-import ChatList from "./Chatlist";
+import { AppContext } from "../../../Context/AppProvider";
 
 const SidebarStyled = styled.div`
   background: #6223b5;
@@ -11,6 +11,8 @@ const SidebarStyled = styled.div`
 `;
 
 export default function Sidebar() {
+  const { rooms, setSelectedRoomId } = React.useContext(AppContext);
+  const handleChatClick = () => setSelectedRoomId(rooms[0].id);
   return (
     <SidebarStyled>
       <Row>
@@ -18,7 +20,9 @@ export default function Sidebar() {
           <UserInfo />
         </Col>
         <Col span={24}>
-          <ChatList />
+          <Button type="link" onClick={handleChatClick}>
+            Chat
+          </Button>
         </Col>
       </Row>
     </SidebarStyled>

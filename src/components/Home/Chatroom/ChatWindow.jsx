@@ -143,10 +143,11 @@ export default function ChatWindow() {
                 icon={<UserAddOutlined />}
                 type="text"
                 onClick={() => setIsInviteMemberVisible(true)}
+                style={{ color: "white" }}
               >
                 Mời
               </Button>
-              <Avatar.Group size="small" maxCount={2}>
+              <Avatar.Group size="small" max={{ count: 2 }}>
                 {members.map((member) => (
                   <Tooltip title={member.displayName} key={member.id}>
                     <Avatar src={member.photoURL}>
