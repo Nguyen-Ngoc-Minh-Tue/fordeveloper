@@ -7,7 +7,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Login from "./components/Login";
 import AuthProvider from "./Context/AuthProvider";
 import AppProvider from "./Context/AppProvider";
-import ChatRoom from "./components/Room/Chatroom";
+import ChatRoom from "./components/Home/Chatroom";
 
 const router = createBrowserRouter([
   {
